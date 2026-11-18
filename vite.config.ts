@@ -1,9 +1,13 @@
+
 import fs from 'fs';
 import path from 'path';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Important for GitHub Pages
+    base: '/SkillSwap/',
+
     plugins: [
       {
         name: 'copy-static-assets',
@@ -12,20 +16,31 @@ export default defineConfig(() => {
           if (error) {
             return;
           }
+
           const distDir = path.resolve(__dirname, 'dist');
           const srcAssets = path.resolve(__dirname, 'src/assets');
           const distSrcAssets = path.resolve(distDir, 'src/assets');
+
           if (fs.existsSync(distDir) && fs.existsSync(srcAssets)) {
-            fs.cpSync(srcAssets, distSrcAssets, {recursive: true, force: true});
+            fs.cpSync(srcAssets, distSrcAssets, {
+              recursive: true,
+              force: true
+            });
           }
+
           const rootAssets = path.resolve(__dirname, 'assets');
           const distRootAssets = path.resolve(distDir, 'assets');
+
           if (fs.existsSync(distDir) && fs.existsSync(rootAssets)) {
-            fs.cpSync(rootAssets, distRootAssets, {recursive: true, force: true});
+            fs.cpSync(rootAssets, distRootAssets, {
+              recursive: true,
+              force: true
+            });
           }
         },
       },
     ],
+
     build: {
       rollupOptions: {
         input: {
@@ -41,6 +56,7 @@ export default defineConfig(() => {
         },
       },
     },
+
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
