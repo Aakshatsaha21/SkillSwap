@@ -781,7 +781,7 @@ export function initWorkspaceShell(activeKey, pageTitle) {
     sidebarEl.innerHTML = `
       <div class="sidebar-header">
         <a href="index.html" class="brand-mark">
-          <img src="./assets/icons/logo.svg" alt="" width="28" height="28" />
+         <img src="/SkillSwap/assets/icons/logo.svg" alt="SkillSwap Logo" width="28" height="28" />
           <span>SkillSwap</span>
         </a>
         <button type="button" class="icon-btn sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close navigation menu">
