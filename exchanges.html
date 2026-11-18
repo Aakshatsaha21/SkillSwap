@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Exchanges — SkillSwap</title>
+    <meta name="description" content="Track pending, accepted, completed, and declined skill exchange requests." />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body data-page="exchanges">
+    <div class="app-shell">
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      <aside class="app-sidebar" id="workspaceSidebar" aria-label="Workspace sidebar"></aside>
+
+      <div class="app-main">
+        <header class="app-topbar" id="workspaceTopbar"></header>
+
+        <main class="app-content">
+          <section class="welcome-banner">
+            <div>
+              <h1>My Skill Exchanges</h1>
+              <p>Review incoming swap requests, accept or decline proposals, and track completed learning sessions.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="proposeNewExchangeBtn">Propose New Exchange</button>
+          </section>
+
+          <div class="filter-tabs" id="exchangeFilterTabs" role="group" aria-label="Exchange status filter"></div>
+
+          <section class="exchanges-grid" id="exchangesGrid" aria-label="Exchange requests"></section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Exchange Details Modal -->
+    <div id="exchangeDetailsModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="exDetailsTitle">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="exDetailsTitle">Exchange Details</h3>
+          <button type="button" class="icon-btn" data-close-details aria-label="Close modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="modal-body" id="exchangeDetailsBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close-details>Close</button>
+          <a href="messages.html" id="detailsMessagePartnerLink" class="btn btn-primary">Message Partner</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Partner Picker for Proposing Exchange -->
+    <div id="quickExchangePickerModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="pickerModalTitle">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="pickerModalTitle">Choose a Partner to Swap With</h3>
+          <button type="button" class="icon-btn" data-close-picker aria-label="Close modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="newSwapPartnerSelect">Select SkillSwap Partner</label>
+            <select id="newSwapPartnerSelect" class="form-select"></select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close-picker>Cancel</button>
+          <button type="button" class="btn btn-primary" id="continueToSwapBtn">Configure Swap</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/exchanges.js"></script>
+  </body>
+</html>

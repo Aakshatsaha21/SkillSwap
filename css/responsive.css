@@ -1,0 +1,232 @@
+/* ==========================================================================
+   SkillSwap — Responsive Breakpoints (Tablet & Mobile)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-media {
+    min-height: 300px;
+    max-height: 420px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item:nth-child(odd) {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .skills-category-grid,
+  .partners-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .auth-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .auth-showcase {
+    display: none;
+  }
+
+  /* Workspace Sidebar becomes slide-over drawer */
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .app-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 272px;
+    transform: translateX(-100%);
+    transition: transform 220ms var(--ease-settle);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-close-btn,
+  .sidebar-open-btn {
+    display: inline-flex;
+  }
+
+  .sidebar-backdrop.open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    background-color: rgba(15, 23, 42, 0.5);
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid,
+  .profile-grid,
+  .exchanges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-search-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section {
+    padding-block: 56px;
+  }
+
+  /* Landing Top Bar */
+  .nav-container {
+    height: 60px;
+    gap: 12px;
+  }
+
+  .nav-links,
+  .nav-actions .btn-login,
+  .nav-actions .btn-signup {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero-section {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .skills-category-grid,
+  .steps-grid,
+  .partners-grid,
+  .testimonials-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 24px;
+  }
+
+  /* App Top Bar <= 15% mobile viewport height */
+  .app-topbar {
+    height: 58px;
+    padding-inline: 16px;
+  }
+
+  .topbar-user-name {
+    display: none;
+  }
+
+  .app-content {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .welcome-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .profile-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-identity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exchange-skills-box {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mobile Chat View Toggle */
+  .chat-shell {
+    grid-template-columns: 1fr;
+    height: calc(100vh - 110px);
+  }
+
+  .chat-shell.thread-open .chat-sidebar {
+    display: none;
+  }
+
+  .chat-shell:not(.thread-open) .chat-main {
+    display: none;
+  }
+
+  .chat-back-btn {
+    display: inline-flex;
+  }
+
+  .message-row {
+    max-width: 86%;
+  }
+
+  .notification-row {
+    flex-direction: column;
+  }
+
+  .auth-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border-hairline);
+    padding-top: 16px;
+  }
+
+  .stat-item:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .partner-card-actions {
+    grid-template-columns: 1fr;
+  }
+}

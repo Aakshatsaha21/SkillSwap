@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifications — SkillSwap</title>
+    <meta name="description" content="Stay updated on exchange requests, accepted swaps, completed sessions, and partner messages." />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body data-page="notifications">
+    <div class="app-shell">
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      <aside class="app-sidebar" id="workspaceSidebar" aria-label="Workspace sidebar"></aside>
+
+      <div class="app-main">
+        <header class="app-topbar" id="workspaceTopbar"></header>
+
+        <main class="app-content">
+          <section class="welcome-banner">
+            <div>
+              <h1>Notifications</h1>
+              <p>Activity across incoming exchange requests, accepted swaps, new messages, and completed sessions.</p>
+            </div>
+            <button type="button" class="btn btn-secondary" id="markAllReadBtn">Mark All as Read</button>
+          </section>
+
+          <div class="filter-tabs" id="notifFilterTabs" role="group" aria-label="Notification filters"></div>
+
+          <section class="panel" style="padding:0;overflow:hidden;">
+            <div class="notification-list" id="notificationsList"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/js/exchanges.js"></script>
+  </body>
+</html>
