@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillSwap — Learn a Skill. Teach a Skill. Grow Together.</title>
+    <meta name="description" content="Peer-to-peer skill exchange platform where learners and mentors trade knowledge across coding, design, video, photography, and marketing." />
+    <meta property="og:title" content="SkillSwap — Peer-to-Peer Skill Exchange" />
+    <meta property="og:description" content="Peer-to-peer skill exchange platform where learners and mentors trade knowledge across coding, design, video, photography, and marketing." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body data-page="landing">
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand-mark">
+          <img src="/assets/icons/logo.svg" alt="" width="30" height="30" />
+          <span>SkillSwap</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="explore.html" class="nav-link">Explore Skills</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#community" class="nav-link">Community</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-ghost btn-login">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-signup">Sign Up</a>
+          <button
+            type="button"
+            class="icon-btn mobile-menu-toggle"
+            id="mobileMenuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-list">
+          <a href="index.html">Home</a>
+          <a href="explore.html">Explore Skills</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#community">Community</a>
+          <a href="dashboard.html">Demo Dashboard</a>
+        </div>
+        <div class="mobile-nav-actions">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-kicker">Peer-to-peer knowledge exchange</p>
+            <h1 class="hero-title">
+              Learn a Skill. Teach a Skill. <span class="hero-title-accent">Grow Together.</span>
+            </h1>
+            <p class="hero-description">
+              Trade what you know for what you want to master. Pair up with fellow students, builders, and creatives for focused 1-on-1 sessions—no subscription fees or tuition required.
+            </p>
+            <div class="hero-cta-row">
+              <a href="signup.html" class="btn btn-primary btn-lg">Get Started</a>
+              <a href="explore.html" class="btn btn-secondary btn-lg">Explore Skills</a>
+            </div>
+            <div class="hero-meta-line">
+              <span>Zero tuition fees</span>
+              <span aria-hidden="true">·</span>
+              <span>Verified peer reviews</span>
+              <span aria-hidden="true">·</span>
+              <span>Flexible 1-on-1 schedules</span>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img
+              src="/src/assets/images/hero_skill_exchange_1795016259412.jpg"
+              alt="Two peers collaborating at a wooden table exchanging graphic design wireframes and Python code"
+              referrerpolicy="no-referrer"
+            />
+            <div class="hero-media-caption">
+              <div>
+                <strong>Active Swap: Python Scripting ↔ Figma UI Systems</strong>
+                <span>Matched by overlapping evening availability · 60 min weekly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats-section" aria-label="Platform statistics">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <div class="stat-value tabular-nums">14,820</div>
+            <div class="stat-label">Registered learners & mentors</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value tabular-nums">340+</div>
+            <div class="stat-label">Practical skills available</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value tabular-nums">28,450</div>
+            <div class="stat-label">Successful skill exchanges</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value tabular-nums">92</div>
+            <div class="stat-label">Active topic communities</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Skills Section -->
+      <section class="section" id="popular-skills">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Browse by discipline</p>
+            <h2 class="section-title">Popular skills ready for exchange</h2>
+            <p class="section-subtitle">
+              Jump straight into active peer circles across engineering, visual craft, media production, and digital growth.
+            </p>
+          </div>
+
+          <div class="skills-category-grid">
+            <a href="explore.html?category=Programming" class="category-card">
+              <div>
+                <div class="category-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3>Programming</h3>
+                <p>Python scripting, SQL querying, data structures, and backend APIs taught through pair programming.</p>
+              </div>
+              <div class="category-meta">
+                <span class="tabular-nums">2,140 mentors</span>
+                <span class="category-link-label">Browse →</span>
+              </div>
+            </a>
+
+            <a href="explore.html?category=Web%20Development" class="category-card">
+              <div>
+                <div class="category-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h3>Web Development</h3>
+                <p>Semantic HTML5, responsive CSS Grid, accessible interfaces, and interactive Vanilla JavaScript.</p>
+              </div>
+              <div class="category-meta">
+                <span class="tabular-nums">1,890 mentors</span>
+                <span class="category-link-label">Browse →</span>
+              </div>
+            </a>
+
+            <a href="explore.html?category=Graphic%20Design" class="category-card">
+              <div>
+                <div class="category-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>Brand identity, typography hierarchy, Figma component libraries, and layout critiques.</p>
+              </div>
+              <div class="category-meta">
+                <span class="tabular-nums">1,620 mentors</span>
+                <span class="category-link-label">Browse →</span>
+              </div>
+            </a>
+
+            <a href="explore.html?category=Video%20Editing" class="category-card">
+              <div>
+                <div class="category-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                </div>
+                <h3>Video Editing</h3>
+                <p>Timeline pacing, DaVinci Resolve color grading, audio mixing, and narrative short-form cuts.</p>
+              </div>
+              <div class="category-meta">
+                <span class="tabular-nums">980 mentors</span>
+                <span class="category-link-label">Browse →</span>
+              </div>
+            </a>
+
+            <a href="explore.html?category=Photography" class="category-card">
+              <div>
+                <div class="category-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                </div>
+                <h3>Photography</h3>
+                <p>Natural lighting, portrait framing, manual exposure control, and Lightroom color profiles.</p>
+              </div>
+              <div class="category-meta">
+                <span class="tabular-nums">840 mentors</span>
+                <span class="category-link-label">Browse →</span>
+              </div>
+            </a>
+
+            <a href="explore.html?category=Digital%20Marketing" class="category-card">
+              <div>
+                <div class="category-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <h3>Digital Marketing</h3>
+                <p>Search optimization, launch copywriting, funnel analytics, and sustainable audience growth.</p>
+              </div>
+              <div class="category-meta">
+                <span class="tabular-nums">1,150 mentors</span>
+                <span class="category-link-label">Browse →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="section section-subtle" id="how-it-works">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Simple four-step workflow</p>
+            <h2 class="section-title">How SkillSwap turns peers into mentors</h2>
+            <p class="section-subtitle">
+              Every exchange starts with a balanced mutual match—so both people walk away having taught and learned something concrete.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-index">01</div>
+              <h3>Create Your Profile</h3>
+              <p>Sign up in under a minute with your background, availability window, and preferred session pace.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-index">02</div>
+              <h3>Add Skills You Can Teach</h3>
+              <p>List the tools, languages, or crafts you feel confident guiding someone else through step by step.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-index">03</div>
+              <h3>Discover Skills You Want to Learn</h3>
+              <p>Filter the partner directory by topic, skill level, and peer ratings to find the right mutual match.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-index">04</div>
+              <h3>Connect and Start Exchanging</h3>
+              <p>Send an exchange request, coordinate session goals in chat, and track completed swaps on your dashboard.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Skill Partners Section -->
+      <section class="section" id="community">
+        <div class="container">
+          <div class="section-header" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;max-width:none;">
+            <div style="max-width:620px;">
+              <p class="section-kicker">Featured community mentors</p>
+              <h2 class="section-title">Meet partners ready to swap this week</h2>
+              <p class="section-subtitle">
+                Every profile shows what a member teaches, what they want to learn next, and verified peer feedback.
+              </p>
+            </div>
+            <a href="explore.html" class="btn btn-secondary">View All Partners</a>
+          </div>
+
+          <div class="partners-grid" id="featuredPartnersGrid"></div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="section section-subtle" aria-label="Community testimonials">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Member outcomes</p>
+            <h2 class="section-title">Real skill trades from the community</h2>
+          </div>
+
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "I traded four weeks of Python automation help for Maya's Figma typography and grid critiques. My portfolio site finally looks cohesive and I landed two product design interviews."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <strong>Daniel Kim</strong>
+                  <span>Data Analyst · Learned Graphic Design</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "Instead of watching 20 hours of passive video courses, Elena walked me through CSS Grid and semantic HTML live on my own project while I helped her plan an organic SEO launch."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <strong>Sofia Alvarez</strong>
+                  <span>Growth Strategist · Learned Web Development</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "My Saturday swap with Arjun cut my video editing time in half. Having someone critique my actual timeline—in exchange for SQL query coaching—made every session count."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <strong>David Morales</strong>
+                  <span>Analytics Lead · Learned Video Editing</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call-To-Action Section -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2>Ready to trade your first skill?</h2>
+              <p>
+                Join thousands of peers teaching what they know and learning what comes next—completely free.
+              </p>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="signup.html" class="btn btn-white btn-lg">Create Free Account</a>
+              <a href="dashboard.html" class="btn btn-secondary btn-lg" style="background:rgba(255,255,255,0.14);color:#fff;border-color:rgba(255,255,255,0.35);">Open Demo Dashboard</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-mark">
+              <img src="/assets/icons/logo.svg" alt="" width="28" height="28" />
+              <span>SkillSwap</span>
+            </a>
+            <p>
+              A peer-to-peer learning network built for exchanging practical skills across code, design, media, and marketing.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <ul class="footer-links">
+              <li><a href="explore.html">Explore Skills</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="dashboard.html">User Dashboard</a></li>
+              <li><a href="exchanges.html">My Exchanges</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Account</h4>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Create Account</a></li>
+              <li><a href="profile.html?me=1">My Profile</a></li>
+              <li><a href="messages.html">Messages</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Popular Tracks</h4>
+            <ul class="footer-links">
+              <li><a href="explore.html?category=Programming">Programming</a></li>
+              <li><a href="explore.html?category=Web%20Development">Web Development</a></li>
+              <li><a href="explore.html?category=Graphic%20Design">Graphic Design</a></li>
+              <li><a href="explore.html?category=Video%20Editing">Video Editing</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 SkillSwap. Interactive frontend demo using browser LocalStorage.</span>
+          <div class="social-links">
+            <button type="button" class="btn btn-secondary btn-sm" data-theme-toggle>
+              <span data-theme-label>Dark Mode</span>
+            </button>
+            <a href="https://github.com" class="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <a href="https://linkedin.com" class="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://x.com" class="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

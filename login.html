@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — SkillSwap</title>
+    <meta name="description" content="Sign in to your SkillSwap account to manage skill exchanges and messages." />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body class="auth-page" data-page="login">
+    <header class="auth-topbar">
+      <div class="container auth-topbar-inner">
+        <a href="index.html" class="brand-mark">
+          <img src="/assets/icons/logo.svg" alt="" width="28" height="28" />
+          <span>SkillSwap</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle color theme"></button>
+          <a href="signup.html" class="btn btn-secondary btn-sm">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <section class="auth-showcase">
+        <h1>Welcome back to your learning circle.</h1>
+        <p>
+          Pick up where you left off—review pending swap requests, reply to partners, and schedule your next live 1-on-1 skill session.
+        </p>
+        <div class="auth-highlights">
+          <div class="auth-highlight-item">
+            <div class="auth-highlight-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+            </div>
+            <div>
+              <strong>Direct Mutual Swaps</strong>
+              <span>Trade Python, Web Dev, Design, Video Editing, and more without fees.</span>
+            </div>
+          </div>
+          <div class="auth-highlight-item">
+            <div class="auth-highlight-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <strong>Built-In Partner Chat</strong>
+              <span>Coordinate session goals, share links, and confirm times in one place.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="auth-card" aria-labelledby="loginHeading">
+        <div class="auth-card-header">
+          <h2 id="loginHeading">Sign in to SkillSwap</h2>
+          <p>Enter your credentials below or fill the demo account to explore.</p>
+        </div>
+
+        <div id="loginBanner" class="auth-alert" role="alert"></div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Email Address</label>
+            <input id="loginEmail" type="email" class="form-input" placeholder="alex@skillswap.edu" autocomplete="email" required />
+            <span id="loginEmailError" class="form-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <div class="password-field-wrap">
+              <input id="loginPassword" type="password" class="form-input" placeholder="Enter your password" autocomplete="current-password" required />
+              <button type="button" class="password-toggle-btn" data-toggle-password="loginPassword" aria-label="Show password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span id="loginPasswordError" class="form-error"></span>
+          </div>
+
+          <div class="auth-row-between">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe" />
+              <span>Remember me</span>
+            </label>
+            <button type="button" class="auth-link" id="forgotPasswordBtn" style="background:none;border:none;padding:0;cursor:pointer;">
+              Forgot password?
+            </button>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Login</button>
+
+          <div class="auth-divider">or</div>
+
+          <button type="button" class="btn btn-secondary" id="fillDemoCredentials" style="width:100%;">
+            Fill Demo Account (alex@skillswap.edu)
+          </button>
+        </form>
+
+        <p class="auth-footer-note">
+          New to SkillSwap? <a href="signup.html" class="auth-link">Create an account</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="forgotTitle">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="forgotTitle">Reset Demo Password</h3>
+          <button type="button" class="icon-btn" data-close-forgot aria-label="Close modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <form id="forgotPasswordForm">
+          <div class="modal-body">
+            <p style="font-size:14px;color:var(--text-secondary);">
+              This frontend demo simulates password resets locally. Enter your email below, or sign in with demo password <strong>Password123</strong>.
+            </p>
+            <div class="form-group">
+              <label class="form-label" for="resetEmailInput">Account Email</label>
+              <input id="resetEmailInput" type="email" class="form-input" placeholder="alex@skillswap.edu" required />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-close-forgot>Cancel</button>
+            <button type="submit" class="btn btn-primary">Send Reset Simulation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages — SkillSwap</title>
+    <meta name="description" content="Chat with your SkillSwap partners to coordinate sessions and share learning goals." />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body data-page="messages">
+    <div class="app-shell">
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      <aside class="app-sidebar" id="workspaceSidebar" aria-label="Workspace sidebar"></aside>
+
+      <div class="app-main">
+        <header class="app-topbar" id="workspaceTopbar"></header>
+
+        <main class="app-content">
+          <section class="chat-shell" id="chatShell" aria-label="Messaging workspace">
+            <aside class="chat-sidebar" aria-label="Conversations">
+              <div class="chat-sidebar-search">
+                <label class="sr-only" for="conversationSearchInput">Search conversations</label>
+                <input id="conversationSearchInput" type="search" class="form-input" placeholder="Search conversations..." />
+              </div>
+              <div class="conversation-list" id="conversationList"></div>
+            </aside>
+
+            <section class="chat-main" aria-label="Active conversation">
+              <div class="chat-header" id="chatHeader"></div>
+              <div class="chat-messages" id="chatMessages"></div>
+              <form class="chat-composer" id="chatComposerForm">
+                <label class="sr-only" for="chatMessageInput">Write a message</label>
+                <input id="chatMessageInput" type="text" class="form-input" placeholder="Write a message to your swap partner..." autocomplete="off" required />
+                <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/js/messages.js"></script>
+  </body>
+</html>

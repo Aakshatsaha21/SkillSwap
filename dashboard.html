@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — SkillSwap</title>
+    <meta name="description" content="Personal SkillSwap dashboard for managing skills, recommended partners, and active exchanges." />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      <aside class="app-sidebar" id="workspaceSidebar" aria-label="Workspace sidebar"></aside>
+
+      <div class="app-main">
+        <header class="app-topbar" id="workspaceTopbar"></header>
+
+        <main class="app-content">
+          <!-- Welcome Banner -->
+          <section class="welcome-banner">
+            <div>
+              <h1 id="welcomeHeading">Welcome back</h1>
+              <p id="welcomeSubtext">Loading your exchange summary...</p>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="explore.html" class="btn btn-primary">Explore Skills</a>
+              <a href="exchanges.html" class="btn btn-secondary">Manage Exchanges</a>
+            </div>
+          </section>
+
+          <!-- KPI Overview -->
+          <section class="kpi-grid" aria-label="Activity summary">
+            <div class="kpi-card">
+              <div class="kpi-label">Pending Requests</div>
+              <div class="kpi-value" id="kpiPending">0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Active Exchanges</div>
+              <div class="kpi-value" id="kpiActive">0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Completed Swaps</div>
+              <div class="kpi-value" id="kpiCompleted">0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Unread Notifications</div>
+              <div class="kpi-value" id="kpiUnread">0</div>
+            </div>
+          </section>
+
+          <div class="dashboard-grid">
+            <!-- Left Primary Column -->
+            <div class="dashboard-stack">
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Recommended Skill Partners</h2>
+                  <a href="explore.html" class="panel-link">Browse all →</a>
+                </div>
+                <div class="compact-list" id="recommendedPartnersList"></div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Pending Exchange Requests</h2>
+                  <a href="exchanges.html" class="panel-link">View all →</a>
+                </div>
+                <div class="compact-list" id="dashPendingList"></div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Active Exchanges</h2>
+                  <a href="exchanges.html" class="panel-link">Open tracker →</a>
+                </div>
+                <div class="compact-list" id="dashActiveList"></div>
+              </section>
+            </div>
+
+            <!-- Right Secondary Column -->
+            <div class="dashboard-stack">
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Profile Overview</h2>
+                  <a href="profile.html?me=1" class="panel-link">Profile →</a>
+                </div>
+                <div id="dashProfileSummary"></div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Skills I Can Teach</h2>
+                </div>
+                <div class="skill-tags-wrap" id="teachSkillsList"></div>
+                <form id="addTeachForm" class="quick-add-row">
+                  <label class="sr-only" for="addTeachInput">Add skill you can teach</label>
+                  <input id="addTeachInput" type="text" class="form-input" placeholder="Add a skill you teach..." />
+                  <button type="submit" class="btn btn-secondary btn-sm">Add</button>
+                </form>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Skills I Want to Learn</h2>
+                </div>
+                <div class="skill-tags-wrap" id="learnSkillsList"></div>
+                <form id="addLearnForm" class="quick-add-row">
+                  <label class="sr-only" for="addLearnInput">Add skill you want to learn</label>
+                  <input id="addLearnInput" type="text" class="form-input" placeholder="Add a skill to learn..." />
+                  <button type="submit" class="btn btn-secondary btn-sm">Add</button>
+                </form>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Recent Notifications</h2>
+                  <a href="notifications.html" class="panel-link">See all →</a>
+                </div>
+                <div class="compact-list" id="dashNotificationsList"></div>
+              </section>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>
